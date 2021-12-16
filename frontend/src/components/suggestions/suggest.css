@@ -1,0 +1,215 @@
+.suggest {
+    position: relative;
+    width: 700px;
+    height: 160px;
+    
+    border: 1px dashed #7B61FF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.user_form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    
+    position: absolute;
+    width: 650px;
+    height: 56px;
+    left: 16px;
+    top: 16px;
+}
+
+.user_pic {
+    position: absolute;
+    left: 7.14%;
+    right: 7.14%;
+    top: 7.14%;
+    bottom: 7.14%;
+    width: 48px;
+    height: 48px;
+    
+    /* Neutral/Blinding Lights */
+    
+    background: #FAFAFA;
+    /* Neutral/Abel */
+    
+    border: 0.4px solid #EFEFEF;
+    box-sizing: border-box;
+
+}
+
+.details {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 428px;
+height: 48px;
+left: 80px;
+top: 4px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 1;
+margin: 0px 8px;}
+
+.username {
+    position: static;
+width: 66px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+/* Headings/H6 */
+
+font-family: SF Pro Display;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height, or 114% */
+
+letter-spacing: 0.5px;
+
+/* Neutral/ Starboy */
+
+color: #262626;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+.ac_name {
+    position: static;
+width: 90px;
+height: 16px;
+left: 0px;
+top: 16px;
+
+/* Body/Body 2 */
+
+font-family: SF Pro Display;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height, or 114% */
+
+letter-spacing: 0.25px;
+
+/* Neutral/Secrets */
+
+color: #8E8E8E;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+
+}
+
+.status {
+    position: static;
+    width: 41px;
+    height: 16px;
+    left: 0px;
+    top: 32px;
+    
+    /* Extra/Caption */
+    
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    
+    letter-spacing: 0.4px;
+    
+    /* Neutral/Secrets */
+    
+    color: #8E8E8E;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 0px;
+
+}
+
+.follow_btn {
+   
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+
+position: static;
+width: 76px;
+height: 32px;
+left: 516px;
+top: 12px;
+
+/* Primary/After Hours */
+
+background: #0095F6;
+border-radius: 4px;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 8px;
+}
+
+.btn {
+    position: static;
+    width: 44px;
+    height: 16px;
+    left: 16px;
+    top: 8px;
+    
+    /* Extra/Button */
+    
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    
+    letter-spacing: 1px;
+    
+    /* Primary/Faith */
+    
+    color: #FFFFFF;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
