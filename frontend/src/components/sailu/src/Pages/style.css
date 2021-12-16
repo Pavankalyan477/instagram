@@ -1,0 +1,359 @@
+.main_lay{
+    display: flex;
+    gap: 50px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.left{
+    height: 608px;
+    width: 448px;
+    margin-top: 72px;
+    margin-left: 456px;
+    background-image: url("https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/homepage.png?raw=true");
+    background-size: cover;
+    
+}
+
+.logo{
+    margin-left: 90px;
+    margin-top: 226.28px;
+}
+
+.up{
+    height: 382px;
+    width: 448px;
+    margin-left: 32px;
+    border: 0.4px solid #8E8E8E;
+    border-radius: 4px;
+    margin-top: 72px;
+}
+
+
+.phonenumber{
+    width: 352px;
+    padding:8px, 12px, 8px, 12px;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 32px;
+}
+
+.password{
+    width: 352px;
+    padding:8px, 12px, 8px, 12px;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 32px;
+}
+
+.log_btn{
+    background-color: #B2DFFC;
+    width: 352px;
+    height: 32px;
+    margin-left: 48px;
+    margin-top: 12px;
+    border-radius: 4px;
+}
+
+.log_title{
+    height: 16px;
+    width: 42px;
+    color: white;
+    margin-left: 150px;
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500px;
+}
+
+.log_title1{
+    height: 16px;
+    width: 60px;
+    color: white;
+    margin-left: 150px;
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500px;
+}
+
+.below{
+    display: flex;
+}
+
+.line1{
+    margin-left: 48px;
+    margin-top: 10px;
+}
+
+.face{
+    display: flex;
+}
+
+.face_logo{
+    margin-left: 139px;
+    margin-top: 30px;
+
+}
+
+.face_text{
+    margin-top: 30px;
+    font-weight: 500px;
+    margin-left: 16px;
+    color: #385185;
+    font-size: 14px;
+    line-height: 16px;
+
+}
+
+
+
+.for{
+    margin-left: 55px;
+    margin-top: 13px;
+    font-size: 12px;
+    font-weight: 400px;
+    line-height: 16px;
+    text-align: center;
+    color:#385185;
+    height: 16px;
+    width: 352px;
+}
+
+
+
+.or{
+    height: 24px;
+    width: 24px;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 11px;
+    color: #8E8E8E;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
+.line2{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+
+.insta_title{
+    height: 40px;
+    width: 144px;
+    margin-top: 32px;
+    margin-left: 152px;
+    background-image: url("https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/titleinsta.png?raw=true");
+    background-size: cover;
+    margin-bottom: 32px;
+}
+
+.down{
+    margin-top: 24px;
+    margin-left: 32px;
+    height: 80px;
+    width: 448px;
+    border: 0.4px solid #8E8E8E;
+    border-radius: 4px;
+    display: flex;
+}
+
+.down1{
+    margin-top: 24px;
+    margin-left: 730px;
+    height: 80px;
+    width: 448px;
+    border: 0.4px solid #8E8E8E;
+    border-radius: 4px;
+    display: flex;
+
+}
+
+
+.account{
+    margin-top: 24px;
+    margin-left: 100px;
+    width: 180px;
+    height: 32px;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #262626;
+    letter-spacing: 0.25px;
+}
+
+
+.account1{
+    margin-top: 24px;
+    margin-left: 130px;
+    width: 130px;
+    height: 32px;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #262626;
+    letter-spacing: 0.25px;
+}
+
+.siup{
+    height: 24px;
+    width: 60px;
+    margin-left: 3px;
+    margin-top: 13px;
+    color: #0095F6;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 54px;
+}
+
+.siup1{
+    height: 24px;
+    width: 50px;
+    margin-left: 3px;
+    margin-top: 13px;
+    color: #0095F6;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 54px;
+}
+
+.text{
+    height: 16px;
+    width: 81px;
+    margin-left: 215px;
+    margin-top: 24px;
+    color: #262626;
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: 16px;
+
+}
+
+.text1{
+    height: 16px;
+    width: 81px;
+    margin-left: 910px;
+    margin-top: 24px;
+    color: #262626;
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: 16px;
+
+}
+
+
+.pics{
+    display: flex;
+}
+
+.pic1{
+    height: 50px;
+    width: 160px;
+    margin-left: 88px;
+    margin-top: 24px;
+    background-image: url("https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/apple.png?raw=true");
+    background-size: cover;
+}
+
+.pic11{
+    height: 50px;
+    width: 160px;
+    margin-left: 790px;
+    margin-top: 24px;
+    background-image: url("https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/apple.png?raw=true");
+    background-size: cover;
+}
+
+.pic2{
+    height: 50px;
+    width: 160px;
+    margin-top: 24px;
+    margin-left: 16px;
+    background-image: url("https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/google.png?raw=true");
+    background-size: cover;
+}
+
+
+.pic21{
+    height: 50px;
+    width: 160px;
+    margin-top: 24px;
+    margin-left: 16px;
+    background-image: url("https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/google.png?raw=true");
+    background-size: cover;
+}
+
+.footop{
+    margin-top: 60px;
+}
+
+.top_foot{
+    display: flex;
+    margin-left: 625px;
+    gap: 16px;
+    font-size: 10px;
+    font-weight: 400px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    color: #8E8E8E;
+}
+
+.top_foot1{
+    display: flex;
+    margin-left: 625px;
+    margin-top: 82px;
+    gap: 16px;
+    font-size: 10px;
+    font-weight: 400px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    color: #8E8E8E;
+}
+.down_foot{
+    display: flex;
+    margin-left: 820px;
+    gap: 16px;
+    font-size: 10px;
+    font-weight: 400px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    color: #8E8E8E;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.down_foot1{
+    display: flex;
+    margin-left: 720px;
+    gap: 16px;
+    font-size: 10px;
+    font-weight: 400px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    color: #8E8E8E;
+    margin-top: 15px;
+    
+}
+
+.downfoo{
+    display: flex;
+    margin-left: 840px;
+    gap: 16px;
+    font-size: 10px;
+    font-weight: 400px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    color: #8E8E8E;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
