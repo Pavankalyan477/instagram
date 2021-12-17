@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
-
 import Suggestion from "./Suggestion";
 
 export const Suggest = () => {
-  
   const Container = styled.div`
     // margin: 96px auto 80px;
     // background: blueviolet;
@@ -12,7 +10,7 @@ export const Suggest = () => {
     width: 608px;
     height: min-content;
     left: 416px;
-    top: 178px;
+    top: 108px;
     border: 0.4px solid #8e8e8e;
     box-sizing: border-box;
     border-radius: 4px;
@@ -36,7 +34,7 @@ export const Suggest = () => {
     // width: 144px;
     height: 24px;
     left: 416px;
-    top: 128px;
+    top: 58px;
 
     /* Subtitles/Subtitle 1 */
 
