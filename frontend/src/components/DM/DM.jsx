@@ -11,8 +11,8 @@ const Container = styled.div`
   position: absolute;
   width: 928px;
   height: 600px;
-  left: 256px;
-  top: 128px;
+  left: 476px;
+  top: 56px;
   box-sizing: border-box;
   border: solid black 1px;
   //   padding: 5px;
@@ -88,16 +88,16 @@ const DM = () => {
               msOverflowStyle: "none",
             }}
           >
-            <DMComponent />
-            <DMComponent />
-            <DMComponent />
-            <DMComponent />
-            <DMComponent />
-            <DMComponent />
-            <DMComponent />
-            <DMComponent />
-            <DMComponent />
-            <DMComponent />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
+            <DMComponent user={"Username"} />
           </SCrollContainer>
         </div>
         <div

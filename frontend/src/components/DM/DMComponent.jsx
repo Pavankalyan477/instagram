@@ -7,10 +7,10 @@ const Container = styled.div`
   padding: 8px 24px;
   box-sizing: border-box;
   margin-top: 5px;
-  border-top: 0.4px solid black;
-  border-bottom: 0.4px solid black;
+  // border-top: 0.4px solid black;
+  // border-bottom: 0.4px solid black;
 `;
-const DMComponent = () => {
+const DMComponent = ({ user }) => {
   return (
     <Container>
       <img
@@ -19,7 +19,7 @@ const DMComponent = () => {
         width="48px"
         height="48px"
       />
-      <p style={{ margin: "auto auto auto 12px" }}>Username</p>
+      <p style={{ margin: "auto auto auto 12px" }}>{user}</p>
     </Container>
   );
 };

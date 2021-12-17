@@ -9,11 +9,11 @@ export const Suggest = () => {
     position: absolute;
     width: 608px;
     height: min-content;
-    left: 416px;
+    left: 656px;
     top: 108px;
-    border: 0.4px solid #8e8e8e;
     box-sizing: border-box;
     border-radius: 4px;
+    // border: 0.4px solid #8e8e8e;
     position: absolute;
     // background: #FFFFFF;
     /* Neutral/Secrets */
@@ -23,17 +23,20 @@ export const Suggest = () => {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 0.4px solid #8e8e8e;
 
     position: absolute;
     width: 608px;
-    height: 704px;
+    height: fit-content;
     // top: 24px;
   `;
   const SuggestionsHeading = styled.h3`
     position: absolute;
     // width: 144px;
     height: 24px;
-    left: 416px;
+    left: 656px;
     top: 58px;
 
     /* Subtitles/Subtitle 1 */
