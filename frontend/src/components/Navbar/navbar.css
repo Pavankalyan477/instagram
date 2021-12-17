@@ -1,292 +1,275 @@
-
 .navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px;
 
-    position: relative;
-    /* width: 1440px; */
-    width: 100%;
-    height: 72px;
+  position: relative;
+  margin: auto;
+  width: 1440px;
+  /* width: 100%; */
+  height: 72px;
 
-    /* Primary/Faith */
+  /* Primary/Faith */
 
-    background: #FFFFFF;
-    /* Neutral/Secrets */
+  background: #ffffff;
+  /* Neutral/Secrets */
 
-    border: 0.4px solid #8E8E8E;
-    box-sizing: border-box;
+  border: 0.4px solid #8e8e8e;
+  box-sizing: border-box;
 }
 
 .navbar1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
 
-    position: static;
-    width: 928px;
-    height: 56px;
-    left: 256px;
-    top: 8px;
+  position: static;
+  width: 928px;
+  height: 56px;
+  left: 256px;
+  top: 8px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 0px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
 }
 
-
 .insta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px;
 
-    position: static;
-    width: 144px;
-    height: 56px;
-    left: 0px;
-    top: 0px;
+  position: static;
+  width: 144px;
+  height: 56px;
+  left: 0px;
+  top: 0px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 176px;
-
-
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: auto 176px auto auto;
 }
 
 .navbar2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
 
-    position: static;
-    width: 608px;
-    height: 32px;
-    left: 320px;
-    top: 12px;
+  position: static;
+  width: 375px;
+  height: 32px;
+  left: 320px;
+  top: 12px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 176px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 176px;
 }
 
 .sericon {
-    position: static;
-    width: 16px;
-    height: 16px;
-    left: 8px;
-    top: 8px;
+  /* position: static; */
+  width: 16px;
+  height: 16px;
+  left: 8px;
+  top: 8px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px 0px 12px;
 }
 
 .search {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* padding: 8px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* padding: 8px; */
 
-    position: static;
-    width: 288px;
-    height: 32px;
-    left: 2px;
-    top: 0px;
+  position: static;
+  width: 288px;
+  height: 32px;
+  left: 2px;
+  top: 0px;
 
-    /* Neutral/Blinding Lights */
+  /* Neutral/Blinding Lights */
 
-    background: #FAFAFA;
-    /* Neutral/Secrets */
+  background: #fafafa;
+  /* Neutral/Secrets */
 
-    border: 0.4px solid #8E8E8E;
-    border-radius: 4px;
+  border: 0.4px solid #8e8e8e;
+  border-radius: 4px;
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 96px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: auto 20px;
 }
 
 .inp {
-    position: static;
-    width: 252px;
-    height: 28px;
-    left: 28px;
-    top: 8px;
+  position: static;
+  width: 252px;
+  height: 28px;
+  left: 28px;
+  top: 8px;
+  outline: none;
+  border: none;
 
-    /* Extra/Button */
+  /* Extra/Button */
 
-    font-family: SF Pro Display;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    /* identical to box height, or 114% */
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
 
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 
-    /* Neutral/Secrets */
+  /* Neutral/Secrets */
 
-    color: #8E8E8E;
+  color: #8e8e8e;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 1;
-    margin: 0px 4px;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  margin: 0px 4px;
 }
 
 .icons {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
 
-    position: static;
-    width: 224px;
-    height: 24px;
-    left: 384px;
-   
-    top: 4px;
+  position: static;
+  width: 224px;
+  height: 24px;
+  left: 384px;
 
+  top: 4px;
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 96px;
-
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 96px;
 }
 
 .home {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    left: 0px;
-    top: 0px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 16px;
-
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 11px;
 }
 
 .msg {
-    cursor: pointer;
-    position: static;
-    width: 24px;
-    height: 24px;
-    left: 40px;
-    top: 0px;
+  cursor: pointer;
+  position: static;
+  width: 24px;
+  height: 24px;
+  left: 40px;
+  top: 0px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 16px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 11px;
 }
 
 .msg1 {
-    cursor: pointer;
-    position: static;
-    width: 24px;
-    height: 24px;
-    left: 80px;
-    top: 0px;
+  cursor: pointer;
+  position: static;
+  width: 24px;
+  height: 24px;
+  left: 80px;
+  top: 0px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-    margin: 0px 16px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  margin: 0px 11px;
 }
 
 .msg2 {
-    cursor: pointer;
-    position: static;
-    width: 24px;
-    height: 24px;
-    left: 120px;
-    top: 0px;
+  cursor: pointer;
+  position: static;
+  width: 24px;
+  height: 24px;
+  left: 120px;
+  top: 0px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 3;
-    flex-grow: 0;
-    margin: 0px 16px;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  margin: 0px 10px;
 }
 
 .notify {
-    cursor: pointer;
-    position: static;
-    width: 24px;
-    height: 24px;
-    left: 160px;
-    top: 0px;
+  cursor: pointer;
+  position: static;
+  width: 24px;
+  height: 24px;
+  left: 160px;
+  top: 0px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 4;
-    flex-grow: 0;
-    margin: 0px 16px;
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+  margin: 0px 9px;
 }
 
 .prof {
-    cursor: pointer;
-    position: static;
-    width: 24px;
-    height: 24px;
-    left: 200px;
-    top: 0px;
+  cursor: pointer;
+  position: static;
+  width: 24px;
+  height: 24px;
+  left: 200px;
+  top: 0px;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 5;
-    flex-grow: 0;
-    margin: 0px 16px;
-
-
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+  margin: 0px 8px;
 }

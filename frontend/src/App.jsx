@@ -1,13 +1,14 @@
-
-import './App.css';
-import { Navbar } from './components/Navbar/Navbar';
-import {Suggest} from "./components/suggestions/Suggest"
+import "./App.css";
+import DM from "./components/DM/DM";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Suggest } from "./components/suggestions/Suggest";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Suggest/>
+      <Navbar />
+      <Suggest />
+      {/* <DM /> */}
     </div>
   );
 }
