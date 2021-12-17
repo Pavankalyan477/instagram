@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Suggestion = () => {
   const [suggest, setSuggest] = useState([]);
+  const [follow, setFollow] = useState(true);
 
   const fetchdata = async () => {
     // const data = await axios.get("http://localhost:3005/suggest/all");
@@ -30,6 +31,32 @@ const Suggestion = () => {
     left: 0px;
     flex: none;
     margin: 8px 0px;
+  `;
+  const FollowBtn = styled.button`
+    background: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    flex-fdirection: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+  `;
+  const FollowingBtn = styled.button`
+    background: #fafafa;
+    color: black;
+    border: none;
+    border: 0.4px solid #8e8e8e;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    flex-fdirection: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
   `;
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -75,7 +102,7 @@ const Suggestion = () => {
                 alignItems: "center",
               }}
             >
-              <button
+              {/* <button
                 style={{
                   background: "#0095F6",
                   color: "white",
@@ -90,7 +117,14 @@ const Suggestion = () => {
                 }}
               >
                 Follow
-              </button>
+              </button> */}
+              {follow ? (
+                <FollowBtn onClick={() => setFollow(!follow)}>Follow</FollowBtn>
+              ) : (
+                <FollowingBtn onClick={() => setFollow(!follow)}>
+                  Following
+                </FollowingBtn>
+              )}
             </div>
           </div>
         </Suggestion>
