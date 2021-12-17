@@ -3,7 +3,6 @@ import { Footer } from "../Footer";
 import { Getapp } from "../Getapp";
 import {Box, TextField, Button} from "@material-ui/core";
 import "./em_style.css";
-import { Link } from "react-router-dom";
 
 export const Emailmain=()=>{
     return(
@@ -22,9 +21,9 @@ export const Emailmain=()=>{
                     <TextField  className="phonenumber" margin="dense" variant="outlined" label="Confirmation Code"/>
                 </Box>
                 <div className="log_btn">
-                      <div className="log_title1"> <Link to="/Suggest">Next</Link> </div>
+                      <div className="log_title1">Next</div>
                 </div>
-                <div className="goback"> <Link to="/Birthmain"> Go Back</Link></div>
+                <div className="goback">Go Back</div>
             </div>
             <Getapp></Getapp>
             <Footer></Footer>

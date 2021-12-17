@@ -3,7 +3,6 @@ import { Footer } from "../Footer";
 import { Getapp } from "../Getapp";
 import {Box, TextField, Button} from "@material-ui/core";
 import "./sign_style.css";
-import { Link } from "react-router-dom";
 
 export const Birthmain=()=>{
     return(
@@ -21,9 +20,9 @@ export const Birthmain=()=>{
                 </Box>
                 <div className="terms1">Use your own birthday, even if this account is for a business, a pet, or something else.</div>
                 <div className="log_btn">
-                      <div className="log_title1"><Link to="/Email">  Next</Link></div>
+                      <div className="log_title1">Next</div>
                 </div>
-                <div className="goback" > <Link to="/Signup_page"> Go Back</Link> </div>
+                <div className="goback">Go Back</div>
             </div>
            
             <Getapp></Getapp>

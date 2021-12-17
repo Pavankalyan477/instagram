@@ -1,7 +1,6 @@
 import React from "react";
 import {Box, TextField, Button} from "@material-ui/core";
 import "./sign_style.css";
-import { Link } from "react-router-dom";
 
 export const Signupmain=()=>{
     return(
@@ -31,7 +30,7 @@ export const Signupmain=()=>{
                     <TextField  className="phonenumber" margin="dense" variant="outlined" label="Password"/>
                 </Box>
                 <div className="log_btn">
-                      <div className="log_title1" > <Link to="/Birthday">Sign up</Link> </div>
+                      <div className="log_title1">Sign up</div>
                 </div>
                 <div className="terms">By signing up, you agree to our Terms, Data Policy and Cookies Policy.</div>
 
