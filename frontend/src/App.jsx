@@ -38,6 +38,15 @@ function App() {
         <Route exact path="/Suggest">
           <Suggest/>
         </Route>
+        <Route exact path="/Suggest">
+          <Navbar/>
+          <Suggest/>
+        </Route>
+
+        <Route exact path="/chat">
+          <Navbar/>
+          <DM/>
+        </Route>
 
       </Switch>
       {/* <Navbar /> */}

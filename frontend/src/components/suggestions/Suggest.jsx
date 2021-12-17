@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Suggestion from "./Suggestion";
 
 export const Suggest = () => {
+
+  const hate=document.querySelector(".hate_you")
   const Container = styled.div`
     // margin: 96px auto 80px;
     // background: blueviolet;
@@ -54,6 +56,7 @@ export const Suggest = () => {
 
   return (
     <div style={{ position: "relative" }}>
+      <div className="hate_you"></div>
       {/* <Header /> */}
       <SuggestionsHeading>Suggestions For You</SuggestionsHeading>
       <Container>
