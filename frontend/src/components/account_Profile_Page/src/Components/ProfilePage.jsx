@@ -15,6 +15,7 @@ export const ProfilePage = () => {
               </div>
               <div>
                 <button className="flw">follow</button>
+                <img src="setting.png" alt="" />
               </div>
             </div>
             <div className="stats">
@@ -40,7 +41,7 @@ export const ProfilePage = () => {
         <P>Highlights</P>
         <div className="activity">
           <div>
-            <img src="logo512.png" alt="" />
+            <img src="plus1.png" alt="" />
             <p>Add new</p>
           </div>
         </div>
@@ -244,6 +245,8 @@ const Component = styled.div`
         height: 48px;
 
         & .flw {
+          width: 108px;
+          height: 32px;
           display: flex;
           flex-direction: row;
           justify-content: center;
@@ -251,7 +254,7 @@ const Component = styled.div`
           padding: 8px 16px;
           background: #fafafa;
           margin-left: 56px;
-
+          margin-top: 8px;
           border: 0.4px solid #8e8e8e;
           box-sizing: border-box;
           border-radius: 4px;
