@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./sailu_style.css";
 
 export const Footer=()=>{
     return(

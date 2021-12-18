@@ -1,10 +1,13 @@
 import React from "react";
-import "./style.css";
+import "./sailu_style.css";
+import { makeStyles } from "@material-ui/core/styles"; 
 import {Box, TextField, Button} from "@material-ui/core";
 
 import { Link } from "react-router-dom";
 
+const useStyles = makeStyles(() => ({ noBorder: { border: "none", }, }));
 export const Home = () => {
+
     return(
         <>
         <div className="main_lay">
@@ -14,8 +17,8 @@ export const Home = () => {
           <div className="right">
               <div className="up">
                   <div className="insta_title"></div>
-                  <Box className="phonenumber">
-                      <TextField   margin="dense" variant="outlined" label="Phonenumber, username or email"/>
+                  <Box >
+                      <TextField className="phonenumber"  margin="dense" variant="standard" label="Phonenumber, username or email"/>
                   </Box>
                   <Box>
                       <TextField  className="password" margin="dense" variant="outlined" label="Password"></TextField>
