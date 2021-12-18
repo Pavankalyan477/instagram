@@ -1,10 +1,10 @@
-// import {AboutPage} from "./Components/Accountage"
-import { Debounce} from "./Components/Debounce"
-
+//  import {AboutPage} from "./Components/Accountage"
+// import { Debounce} from "./Components/Debounce"
+import {ProfilePage} from "./Components/ProfilePage"
 function App() {
   return <>
-    {/* <AboutPage/> */}
-    <Debounce/>
+    <ProfilePage/>
+    {/* <Debounce/> */}
   </>
 }
 
