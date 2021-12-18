@@ -1,10 +1,13 @@
 import React from "react";
-import "./style.css";
+import "./sailu_style.css";
+import { makeStyles } from "@material-ui/core/styles"; 
 import {Box, TextField, Button} from "@material-ui/core";
 
 import { Link } from "react-router-dom";
 
+const useStyles = makeStyles(() => ({ noBorder: { border: "none", }, }));
 export const Home = () => {
+
     return(
         <>
         <div className="main_lay">

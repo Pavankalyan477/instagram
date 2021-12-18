@@ -1,16 +1,16 @@
-.signupmain_lay{
+.signmain_lay{
     height: 585px;
-    width: 448px;
+    width: 400px;
     border: 0.4px solid #8E8E8E;
     border-radius: 4px;
     margin-left: 730px;
     margin-top: 50px;
+    padding-left: 48px;
 }
 
-.from{
+.from1{
     height: 42px;
-    width: 252px;
-    margin-left: 98px;
+    width: 250px;
     margin-top: 24px;
     font-weight: 400px;
     font-size: 18px;
@@ -18,24 +18,25 @@
     letter-spacing: 0.15px;
     text-align: center;
     color: #8E8E8E;
+    margin-left: 45px;
+
 }
 
-.face1{
+.face1_logo{
     display: flex;
     height: 32px;
     width: 352px;
     border-radius: 4px;
-    margin-left: 46px;
     margin-top: 24px;
     background-color: #0095F6;
 }
 
-.face_logo1{
+.face1_logo1{
     margin-left: 94px;
     margin-top: 9px;
 }
 
-.face_text1{
+.face1_text1{
     width: 170px;
     height: 16px;
     font-size: 14px;
@@ -44,12 +45,12 @@
     font-weight: 500px;
     color: #FFFF;
     margin-top: 9px;
+    margin-left: 4px;
 }
 
-.terms{
+.terms11{
     width: 288px;
     height: 32px;
-    margin-left: 80px;
     margin-top: 24px;
     font-weight: 500px;
     font-size: 14px;
@@ -57,4 +58,16 @@
     letter-spacing: 0.25px;
     text-align: center;
     color: #8E8E8E;
+    margin-left: 30px;
+
+}
+
+.insta_title_sign{
+    height: 40px;
+    width: 144px;
+    margin-top: 32px;
+    margin-left: 100px;
+    background-image: url("https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/titleinsta.png?raw=true");
+    background-size: cover;
+    margin-bottom: 32px;
 }
