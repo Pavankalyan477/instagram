@@ -9,6 +9,9 @@ import {Signup_page} from "./components/sailu/src/Pages/signup/Signup_page"
 import {Birthmain} from "./components/sailu/src/Pages/birthday/Birthmain"
 import {Emailmain} from "./components/sailu/src/Pages/email/Emailmain"
 
+import {ProfilePage} from "./account/ProfilePage"
+
+
 function App() {
   return (
     <div className="App" >
@@ -46,6 +49,11 @@ function App() {
         <Route exact path="/chat">
           <Navbar/>
           <DM/>
+        </Route>
+
+        <Route exact path="/account">
+          <Navbar/>
+          <ProfilePage/>
         </Route>
 
       </Switch>

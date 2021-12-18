@@ -10,9 +10,9 @@ const Suggestion = () => {
     // const data = await axios.get("http://localhost:3005/suggest/all");
 
     // setSuggest(data.data.item);
-    const data = await axios.get("http://localhost:3001/item");
+    const data = await axios.get("http://localhost:3005/suggest");
 
-    setSuggest(data.data);
+    setSuggest(data.data.item);
   };
 
   useEffect(() => {
