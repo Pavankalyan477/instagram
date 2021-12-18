@@ -15,7 +15,7 @@ export const Home = () => {
               <div className="up">
                   <div className="insta_title"></div>
                   <Box className="phonenumber">
-                      <TextField   margin="dense" variant="outlined" label="Phonenumber, username or email"/>
+                      <TextField   margin="dense" variant="outlined" label="Phonenumber, username or email"><button>pavan</button></TextField>
                   </Box>
                   <Box>
                       <TextField  className="password" margin="dense" variant="outlined" label="Password"></TextField>

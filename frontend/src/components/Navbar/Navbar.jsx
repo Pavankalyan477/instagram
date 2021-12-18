@@ -279,12 +279,12 @@ function debounce(func,delay){
         </div>
       </div>
     </div><br />
-    <div className="hate_you" style={{alignItems:"center",margin:"auto",display:"none"}}>
-      <div className="hate" style={{height:"500px",width:"500px",background:"brown"}}>
+    <div className="hate_you" style={{alignItems:"center",margin:"auto",display:"none",position:"absolute",top:"60px",left:"765px",overflow:"scroll"}}>
+      <div className="hate" style={{height:"200px",width:"290px",background:"brown"}}>
       <p>Pavan</p>
       </div>
             
-            </div>
+        </div>
     </div>
   );
 };
