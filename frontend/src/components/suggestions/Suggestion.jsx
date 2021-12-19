@@ -10,9 +10,9 @@ const Suggestion = () => {
     // const data = await axios.get("http://localhost:3005/suggest/all");
 
     // setSuggest(data.data.item);
-    const data = await axios.get("http://localhost:3001/item");
+    const data = await axios.get("http://localhost:3005/suggest/all");
 
-    setSuggest(data.data);
+    setSuggest(data.data.item);
   };
 
   useEffect(() => {
@@ -72,7 +72,8 @@ const Suggestion = () => {
           >
             <div>
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"
+                // src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"
+                src={data.profile_pic}
                 alt=""
                 width="48px"
                 height="48px"

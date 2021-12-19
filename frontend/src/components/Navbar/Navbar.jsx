@@ -78,18 +78,26 @@ const Navbar = () => {
   }
 
   function appendsearch(m) {
-    m.forEach(({ name }) => {
-      let out = document.querySelector(".hate");
+    m.forEach(({ name, profile_pic, description }) => {
+      let out = document.querySelector(".div22");
       let show = document.querySelector(".hate_you");
-      let come = document.createElement("p");
-      come.innerText = name;
+      let come = document.querySelector(".cls1");
+      let come2 = document.querySelector(".cls2");
+      let img = document.querySelector(".pic");
+
+      // let img=document.createElement("img")
+
+      img.src = profile_pic;
+
+      come = name;
+      come2 = description;
       if (m.length !== 0) {
         show.style.display = "block";
       } else {
         show.style.display = "none";
       }
-
-      out.append(come);
+      out.append(come, come2);
+      show.append(img, out);
     });
   }
   function debounce(func, delay) {
@@ -230,7 +238,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="prof">
-                <Link>
+                <Link to="/account">
                   {" "}
                   <svg
                     width="24"
@@ -267,6 +275,9 @@ const Navbar = () => {
       <div
         className="hate_you"
         style={{
+          height: "200px",
+          width: "265px",
+          background: "brown",
           alignItems: "center",
           margin: "auto",
           display: "none",
@@ -274,14 +285,16 @@ const Navbar = () => {
           top: "60px",
           left: "765px",
           overflow: "scroll",
-          zIndex: 99,
         }}
       >
-        <div
-          className="hate"
-          style={{ height: "200px", width: "290px", background: "gray" }}
-        >
-          <p>Pavan</p>
+        <div className="hate" style={{ display: "flex", flexDirection: "row" }}>
+          <div className="div11">
+            <img className="pic" />
+          </div>
+          <div className="div22">
+            <div className="cls1"></div> <br />
+            <div className="cls2"></div>
+          </div>
         </div>
       </div>
     </div>

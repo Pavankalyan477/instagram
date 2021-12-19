@@ -17,7 +17,7 @@ export const Birthmain=()=>{
                 <div className="pbpro">This wont be a part of your public profile</div>
                 <div className="bd">why do I need to provide my birthday?</div>
                 <Box>
-                     <TextField  className="password" margin="dense" variant="outlined" label="DD/MM/YYYY"></TextField>
+                     <TextField className="password" margin="dense" variant="outlined" label="DD/MM/YYYY"  min="6"></TextField>
                 </Box>
                 <div className="terms1">Use your own birthday, even if this account is for a business, a pet, or something else.</div>
                 <div className="log_btn">
