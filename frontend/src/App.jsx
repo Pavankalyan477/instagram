@@ -10,6 +10,7 @@ import { Birthmain } from "./components/sailu/src/Pages/birthday/Birthmain";
 import { Emailmain } from "./components/sailu/src/Pages/email/Emailmain";
 
 import { ProfilePage } from "./account/ProfilePage";
+import {AboutPage} from "./account/AboutPage"
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
           <Home />
         </Route>
 
-        <Route exact path="/Suggest">
+        <Route exact path="/Homepage">
           <Navbar />
-          <Suggest />
+         <Homepage/>
         </Route>
         <Route exact path="/Signup_page">
           <Signup_page />
@@ -55,6 +56,11 @@ function App() {
         <Route exact path="/account">
           <Navbar />
           <ProfilePage />
+        </Route>
+
+        <Route exact path="/Postpage/:na">
+          <Navbar/>
+          <AboutPage/>
         </Route>
       </Switch>
       {/* <Navbar /> */}

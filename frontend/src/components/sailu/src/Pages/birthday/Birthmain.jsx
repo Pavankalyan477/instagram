@@ -21,9 +21,9 @@ export const Birthmain=()=>{
                 </Box>
                 <div className="terms1">Use your own birthday, even if this account is for a business, a pet, or something else.</div>
                 <div className="log_btn">
-                      <div className="log_title1"><Link to="/Email">  Next</Link></div>
+                      <div className="log_title1"><Link className="link" to="/Email">  Next</Link></div>
                 </div>
-                <div className="goback" > <Link to="/Signup_page"> Go Back</Link> </div>
+                <div className="goback" > <Link className="link" to="/Signup_page"> Go Back</Link> </div>
             </div>
            
             <Getapp></Getapp>

@@ -139,3 +139,7 @@
     height: 16px;
     width: 60px;
 }
+.link{
+    text-decoration: none;
+    color: #FFFFFF;
+  }

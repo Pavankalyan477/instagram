@@ -22,9 +22,9 @@ export const Emailmain=()=>{
                     <TextField  className="phonenumber" margin="dense" variant="outlined" label="Confirmation Code"/>
                 </Box>
                 <div className="log_btn">
-                      <div className="log_title1"> <Link to="/Suggest">Next</Link> </div>
+                      <div className="log_title1"> <Link className="link" to="/Suggest">Next</Link> </div>
                 </div>
-                <div className="goback"> <Link to="/Birthmain"> Go Back</Link></div>
+                <div className="goback"> <Link className="link" to="/Birthmain"> Go Back</Link></div>
             </div>
             <Getapp></Getapp>
             <Footer></Footer>

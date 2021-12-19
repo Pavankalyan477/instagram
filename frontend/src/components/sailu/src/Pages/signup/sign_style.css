@@ -71,3 +71,8 @@
     background-size: cover;
     margin-bottom: 32px;
 }
+
+.link{
+    text-decoration: none;
+    color: #FFFFFF;
+  }

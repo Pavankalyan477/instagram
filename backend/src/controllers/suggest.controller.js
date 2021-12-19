@@ -25,9 +25,7 @@ router.get("/all", async (req, res) => {
 //findbyid   find({movies_name:"Torque"})
 
 router.get("/one/:name", async (req, res) => {
-  let item = await Suggest.find({ name: req.params.name })
-    .lean()
-    .exec();
+  let item = await Suggest.find({ user_name: req.params.name }).lean().exec();
 
   return res.status(200).send({ item });
 });

@@ -5,67 +5,17 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Navbar = () => {
-  //   const [search, setSearch] = useState("");
-  //   const [suggest, setSuggest] = useState([]);
-  // var arr=[];
-  //   for(var i=0;i<suggest.length;i++){
-  //     arr.push(suggest[i]);
-  //   }
-  //   // console.log("array",arr)
-
-  //   const fetchdata = async () => {
-  //     // const data = await axios.get("http://localhost:3005/suggest/all");
-
-  //     // setSuggest(data.data.item);
-  //     const data = await axios.get("http://localhost:3001/item");
-
-  //     // check();
-  //     setSuggest(data.data);
-  //   };
-
-  //   useEffect(() => {
-  //     fetchdata();
-  //   }, []);
-
-  //   const handleSearch = debounce((text) => {
-  //     setSearch(text);
-  //     // console.log("pavan:",text);
-
-  //     function check(arr, search) {
-
-  //        for(var i=0;i<arr.length;i++){
-  //         return arr[i].name.filter(search);
-  //       }
-
-  //     }
-  //     check(arr,search);
-  //   }, 300);
-
-  // useEffect(() => {
-  //     return () => {
-  //     cleanup
-  //   }
-  // }, [input])(() => {
-  //   fetchdata();
-  // }, []);
-  // const Icon = (e) => {
-  //   const val = document.querySelector(".sericon");
-  //   var value = e.target.value;
-  //   if (value.length !== 0) {
-  //     val.style.display = "none";
-  //   } else {
-  //     val.style.display = "block";
-  //   }
-  // };
-  const [display,setDisplay]=useState({name:" ",desc1:" ",img1:" "})
+  const [display, setDisplay] = useState([]);
   var timerId;
 
   async function get(name) {
-    var res = await fetch(`http://localhost:3001/item?q=${name}`);
+    var res = await fetch(`http://localhost:3005/suggest/one/${name}`);
     var data = await res.json();
-    return data;
+    // console.log(data);
+    // console.log("disp:", data);
+    return data.item;
   }
-  console.log("disp:",display)
+
   async function main() {
     let name = document.querySelector(".inp").value;
     let search = await get(name);
@@ -74,44 +24,52 @@ const Navbar = () => {
     if (search === undefined) {
       return false;
     }
-    appendsearch(search);
-  }
-
-  function appendsearch(m) {
-    m.forEach(({ name, profile_pic, description }) => {
-      let out = document.querySelector(".div22");
+    // console.log("len",search.length)
+    if(search.length!==1){
       let show = document.querySelector(".hate_you");
-      var come = document.querySelector(".cls1");
-      var come2 = document.querySelector(".cls2");
-      var img = document.querySelector(".pic");
+      show.style.display="none";
 
-      // let img=document.createElement("img")
-      
-
-      img.src = profile_pic;
-     
-      come = name;
-      come2 = description;
-      if (m.length !== 0) {
-        show.style.display = "block";
-      } else {
-        show.style.display = "none";
-      }
-
-   name=come ;
+    }else{
+      let show = document.querySelector(".hate_you");
+      show.style.display="block";
+      //  console.log("seaarch:",search)
+      setDisplay(search);
+    }
    
-
-    let data = {
-      ...display,
-     
-    };
-    setDisplay(data);
-   
-
-      // out.append(come,come2);
-      // show.append(img,out);
-    });
   }
+  console.log(display);
+  // function appendsearch(m) {
+  //   m.forEach(({ name, profile_pic, description }) => {
+  //     let out = document.querySelector(".div22");
+  //     let show = document.querySelector(".hate_you");
+  //     var come = document.querySelector(".cls1");
+  //     var come2 = document.querySelector(".cls2");
+  //     var img = document.querySelector(".pic");
+
+  //     // let img=document.createElement("img")
+
+  //     img.src = profile_pic;
+
+  //     come = name;
+  //     come2 = description;
+  //     if (m.length !== 0) {
+  //       show.style.display = "block";
+  //     } else {
+  //       show.style.display = "none";
+  //     }
+
+  //     //  name=come ;
+
+  //     // let data = {
+  //     //   ...display,
+
+  //     // };
+  //     // setDisplay(data);
+
+  //     out.append(come, come2);
+  //     show.append(img, out);
+  //   });
+  // }
   function debounce(func, delay) {
     if (timerId) {
       clearTimeout(timerId);
@@ -165,7 +123,7 @@ const Navbar = () => {
             </div>
             <div className="icons">
               <div className="home">
-                <Link to="/Suggest">
+                <Link className="link" to="/Homepage">
                   <svg
                     width="24"
                     height="24"
@@ -182,7 +140,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="msg">
-                <Link to="/chat">
+                <Link className="link" to="/chat">
                   <svg
                     width="24"
                     height="24"
@@ -198,7 +156,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="msg1">
-                <Link>
+                <Link className="link" to="/chat">
                   <svg
                     width="24"
                     height="24"
@@ -214,7 +172,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="msg2">
-                <Link>
+                <Link className="link" to="/chat">
                   <svg
                     width="24"
                     height="24"
@@ -230,7 +188,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="notify">
-                <Link>
+                <Link className="link" to="/chat">
                   <svg
                     width="24"
                     height="24"
@@ -250,7 +208,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="prof">
-                <Link to="/account">
+                <Link className="link" to="/account">
                   {" "}
                   <svg
                     width="24"
@@ -284,30 +242,36 @@ const Navbar = () => {
         </div>
       </div>
       <br />
+
       <div
         className="hate_you"
         style={{
           height: "200px",
           width: "265px",
-          background: "brown",
+          background: "white",
           alignItems: "center",
+          border: "1px solid black",
+          padding: "5px",
           margin: "auto",
           display: "none",
           position: "absolute",
           top: "60px",
           left: "765px",
           overflow: "scroll",
+          zIndex: 1,
         }}
       >
-        <div className="hate" style={{display:"flex",flexDirection:"row"}}>
-          <div className="div11">
-            <img className="pic"  />
-          </div>
-          <div className="div22">
-            <div className="cls1">{}</div> <br />
-            <div className="cls2">{}</div>
-          </div>
-        </div>
+        {display.map((el) => (
+          <Link style={{ display: "flex", flexDirection: "row" }} to={`/Postpage/${el.user_name}`} >
+            <div>
+              <img src={el.profile_pic} alt="dp" width="30px" height="30px" />
+            </div>
+            <div style={{ margin: "0px 5px" }}>
+              <h4 style={{ margin: "0px" }}>{el.user_name}</h4>
+              <h6 style={{ margin: "0px" }}>{el.description}</h6>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

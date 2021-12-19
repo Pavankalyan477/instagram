@@ -123,7 +123,7 @@ export const Signupmain = () => {
         </Box>
         <div className="log_btn">
           <div className="log_title1" type="submit" onClick={handleSignup}>
-            <Link to={!isAuth?"/Signup_page": "/Birthday"}>Sign up</Link>
+            <Link className="link" to={!isAuth?"/Signup_page": "/Birthday"}>Sign up</Link>
           </div>
         </div>
 

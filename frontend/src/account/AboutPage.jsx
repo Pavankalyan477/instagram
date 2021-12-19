@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 import "../App.css"
 export const AboutPage = () => {
 

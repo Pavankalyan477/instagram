@@ -24,7 +24,7 @@ export const Home = () => {
                       <TextField  className="password" margin="dense" variant="outlined" label="Password"></TextField>
                   </Box>
                   <div className="log_btn">
-                      <div className="log_title"> <Link to="/Suggest"> Log In</Link> </div>
+                      <div className="log_title"> <Link className="link" style={{color:"#FFFFF"}} to="/Homepage"> Log In</Link> </div>
                   </div>
                   <div className="below">
                     <div className="line1"><img src="https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/line.png?raw=true"></img></div>
@@ -40,7 +40,7 @@ export const Home = () => {
               </div>
               <div className="down">
                   <div className="account">Don't have an account?</div>
-                  <div className="siup"> <Link to="/Signup_page">Sign up</Link> </div>
+                  <div className="siup"> <Link className="link"  style={{color:"#0095F6"}} to="/Signup_page">Sign up</Link> </div>
               </div>
               <div className="text">Get the app</div>
               <div className="pics">
