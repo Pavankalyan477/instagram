@@ -30,7 +30,7 @@ export const Signupmain = () => {
       setIsAuth(!isAuth);
       try {
         let res = await axios.post(
-          "http://localhost:3005/api/auth/register",
+          "http://localhost:3005/api/auth/login",
           state
         );
        
