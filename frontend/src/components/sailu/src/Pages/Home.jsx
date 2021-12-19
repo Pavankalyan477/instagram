@@ -7,6 +7,7 @@ import { useState, useContext } from "react";
 import { loginCall } from "../../../../apicalls";
 import { AuthContext } from "../../../../Context/AuthContext";
 import { nanoid } from "nanoid";
+import { useParams } from "react-router";
 const useStyles = makeStyles(() => ({ noBorder: { border: "none" } }));
 
 export const Home = () => {
@@ -15,6 +16,8 @@ export const Home = () => {
     email: nanoid(5),
     password: " ",
   });
+  const params = useParams();
+  console.log("params:", params);
 
   const { user, err, dispatch } = useContext(AuthContext);
 
@@ -95,7 +98,7 @@ export const Home = () => {
           <div className="down">
             <div className="account">Don't have an account?</div>
             <div className="siup">
-              <Link to="/signup">Sign up</Link>
+              <Link to="/Signup_page">Sign up</Link>
             </div>
           </div>
           <div className="text">Get the app</div>

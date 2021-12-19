@@ -9,8 +9,8 @@ import Homepage from "./components/Homepage/Homepage";
 import { Birthmain } from "./components/sailu/src/Pages/birthday/Birthmain";
 import { Emailmain } from "./components/sailu/src/Pages/email/Emailmain";
 
-import { ProfilePage } from "./account/ProfilePage";
-import {AboutPage} from "./account/AboutPage"
+import { ProfilePage } from "./components/ProfilePage";
+import { AboutPage } from "./components/Accountage";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
 
         <Route exact path="/Homepage">
           <Navbar />
-         <Homepage/>
+          <Homepage />
         </Route>
         <Route exact path="/Signup_page">
           <Signup_page />
@@ -41,9 +41,6 @@ function App() {
           <Homepage />
         </Route>
         <Route exact path="/Suggest">
-          <Suggest />
-        </Route>
-        <Route exact path="/Suggest">
           <Navbar />
           <Suggest />
         </Route>
@@ -53,14 +50,14 @@ function App() {
           <DM />
         </Route>
 
+        <Route exact path="/Postpage/:na">
+          <Navbar />
+          <AboutPage />
+        </Route>
+
         <Route exact path="/account">
           <Navbar />
           <ProfilePage />
-        </Route>
-
-        <Route exact path="/Postpage/:na">
-          <Navbar/>
-          <AboutPage/>
         </Route>
       </Switch>
     </div>

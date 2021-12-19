@@ -1,48 +1,83 @@
 import styled from "styled-components";
 import "../App.css";
-export const ProfilePage = () => {
+import { useState, useContext, useEffect } from "react";
+import { AuthContext } from "../Context/AuthContext";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+
+export const AboutPage = () => {
+  const { na } = useParams();
+
+  const [itm, setItm] = useState({});
+  const [imgs, setimgs] = useState([]);
+  async function get(id) {
+    var res = await fetch(`http://localhost:3005/suggest/id/${id}`);
+
+    var data = await res.json();
+
+    setItm(data.item[0]);
+    setimgs(data.item[0].images);
+
+    return data.item;
+  }
+  useEffect(() => {
+    get(na);
+  }, []);
+
+  // const Images = itm.images;
+
   return (
     <>
       <Component>
         <div className="felx-top">
           <div>
-            <img src="/Profile.png" alt="Profile" />
+            <img className="pro" src={itm.profile_pic} alt="Profile" />
           </div>
+
           <div className="cont2">
             <div className="profileTag">
               <div>
-                <p>DesignShift</p>
+                <p>{itm.name}</p>
               </div>
-              <div className="flexrow">
-                <button className="flw">Edit profile</button>
-                <img src="setting.png" alt="" />
+              <div>
+                <img src="/FollowBtn.png" alt="" />
+              </div>
+              <div>
+                <img src="/Arrow.png" alt="" />
+              </div>
+              <div>
+                <img src="/Vector.png" alt="" />
               </div>
             </div>
             <div className="stats">
               <p>
-                <span>123</span> Post
+                <span>{itm.tags}</span> Post
               </p>
               <p>
-                <span>123</span> Followers
+                <span>{itm.followers}</span> Followers
               </p>
               <p>
-                <span>123</span> Following
+                <span>{itm.following}</span> Following
               </p>
             </div>
             <div className="detailed">
-              <p>Design shift Academy</p>
-              <p>
-                Transforming Design Education in India 🇮🇳 <br /> Making it truly
-                accessible with ZERO upfront cost.
-              </p>
+              <Desc>{itm.user_name}</Desc>
+              <p>{itm.description}</p>
+              <a href="https://learn.masaischool.com/app/dashboard">
+                https://learn.masaischool.com
+              </a>
             </div>
           </div>
         </div>
         <P>Highlights</P>
         <div className="activity">
-          <div>
-            <img src="plus1.png" alt="" />
-            <p>Add new</p>
+          <div className="flexx">
+            {imgs.map((e) => (
+              <div>
+                <img src={e} alt="" />
+                <h6>highlights</h6>
+              </div>
+            ))}
           </div>
         </div>
       </Component>
@@ -115,70 +150,13 @@ export const ProfilePage = () => {
           <p>TAGGED</p>
         </div>
       </Tags>
-
-      <Info>
-        <div className="div">
-          <div className="inner">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-            >
-              <path
-                d="M9 0C4.038 0 0 4.038 0 9C0 13.962 4.038 18 9 18C13.962 18 18 13.962 18 9C18 4.038 13.962 0 9 0ZM9 1.5C13.1512 1.5 16.5 4.84875 16.5 9C16.5018 10.7955 15.858 12.5317 14.686 13.892C13.514 15.2522 11.892 16.1456 10.116 16.4093V11.187H12.252L12.5873 9.01725H10.116V7.83225C10.116 6.93225 10.4123 6.132 11.2545 6.132H12.6083V4.239C12.3705 4.20675 11.8673 4.137 10.9163 4.137C8.93025 4.137 7.76625 5.1855 7.76625 7.575V9.01725H5.72475V11.187H7.76625V16.3905C6.01481 16.1022 4.42293 15.2006 3.27502 13.8468C2.12711 12.4929 1.49797 10.775 1.5 9C1.5 4.84875 4.84875 1.5 9 1.5Z"
-                fill="#262626"
-              />
-            </svg>
-            <p>
-              You choose which friends to follow. We will never post without
-              your permission.
-            </p>
-            <button>Connect to Photo</button>
+      <Grid>
+        {imgs.map((e) => (
+          <div>
+            <img className="boxes" src={e} alt="" />
           </div>
-        </div>
-        <div className="div">
-          <div className="inner">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M17.5003 19.75H17.3728C2.63531 18.9025 0.542808 6.4675 0.250308 2.6725C0.226739 2.37744 0.261624 2.08062 0.352964 1.79906C0.444304 1.5175 0.590303 1.25673 0.782596 1.03169C0.974889 0.80665 1.2097 0.621766 1.47357 0.48763C1.73743 0.353493 2.02518 0.272741 2.32031 0.250001H6.45281C6.75323 0.24971 7.04681 0.339633 7.29553 0.508122C7.54425 0.676611 7.73665 0.915903 7.84781 1.195L8.98781 4C9.09757 4.27266 9.12481 4.57156 9.06614 4.85957C9.00747 5.14758 8.86548 5.412 8.65781 5.62L7.06031 7.2325C7.30985 8.65056 7.98895 9.95775 9.00573 10.9772C10.0225 11.9967 11.3279 12.6792 12.7453 12.9325L14.3728 11.32C14.5839 11.1146 14.8508 10.9759 15.1403 10.9213C15.4297 10.8666 15.7288 10.8983 16.0003 11.0125L18.8278 12.145C19.1027 12.2597 19.3372 12.4536 19.5015 12.702C19.6658 12.9504 19.7524 13.2422 19.7503 13.54V17.5C19.7503 18.0967 19.5133 18.669 19.0913 19.091C18.6693 19.5129 18.097 19.75 17.5003 19.75ZM2.50031 1.75C2.3014 1.75 2.11063 1.82902 1.96998 1.96967C1.82933 2.11032 1.75031 2.30109 1.75031 2.5V2.56C2.09531 7 4.30781 17.5 17.4553 18.25C17.5538 18.2561 17.6526 18.2427 17.7459 18.2105C17.8393 18.1783 17.9253 18.1281 17.9992 18.0626C18.073 17.9971 18.1333 17.9176 18.1763 17.8288C18.2194 17.74 18.2446 17.6436 18.2503 17.545V13.54L15.4228 12.4075L13.2703 14.545L12.9103 14.5C6.38531 13.6825 5.50031 7.1575 5.50031 7.09L5.45531 6.73L7.58531 4.5775L6.46031 1.75H2.50031Z"
-                fill="#262626"
-              />
-            </svg>
-            <p>
-              Add your phone number so you can reset your password, find friends
-              and more.
-            </p>
-            <button>Add Phone number</button>
-          </div>
-        </div>
-        <div className="div">
-          <div className="inner">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="18"
-              viewBox="0 0 22 18"
-              fill="none"
-            >
-              <path
-                d="M19.25 2.8125H16.0625L15.3031 0.684375C15.2507 0.538753 15.1545 0.412879 15.0278 0.323947C14.9011 0.235016 14.7501 0.187363 14.5953 0.1875H7.40469C7.08828 0.1875 6.80469 0.386719 6.69922 0.684375L5.9375 2.8125H2.75C1.71406 2.8125 0.875 3.65156 0.875 4.6875V15.375C0.875 16.4109 1.71406 17.25 2.75 17.25H19.25C20.2859 17.25 21.125 16.4109 21.125 15.375V4.6875C21.125 3.65156 20.2859 2.8125 19.25 2.8125ZM19.4375 15.375C19.4375 15.4781 19.3531 15.5625 19.25 15.5625H2.75C2.64688 15.5625 2.5625 15.4781 2.5625 15.375V4.6875C2.5625 4.58438 2.64688 4.5 2.75 4.5H7.12578L7.52656 3.37969L8.06328 1.875H13.9344L14.4711 3.37969L14.8719 4.5H19.25C19.3531 4.5 19.4375 4.58438 19.4375 4.6875V15.375ZM11 6C8.92813 6 7.25 7.67812 7.25 9.75C7.25 11.8219 8.92813 13.5 11 13.5C13.0719 13.5 14.75 11.8219 14.75 9.75C14.75 7.67812 13.0719 6 11 6ZM11 12C9.75781 12 8.75 10.9922 8.75 9.75C8.75 8.50781 9.75781 7.5 11 7.5C12.2422 7.5 13.25 8.50781 13.25 9.75C13.25 10.9922 12.2422 12 11 12Z"
-                fill="#262626"
-              />
-            </svg>
-            <p>Add a profile photo so your friends know it's you.</p>
-            <button>Add profile Photo</button>
-          </div>
-        </div>
-      </Info>
-
+        ))}
+      </Grid>
       <Footer>
         <div>
           <p>Meta</p>
@@ -201,6 +179,15 @@ export const ProfilePage = () => {
   );
 };
 
+const Desc = styled.p`
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #262626;
+`;
 const Component = styled.div`
   /* font-family: SF Pro Display; */
   display: flex;
@@ -213,9 +200,10 @@ const Component = styled.div`
     margin: 56px auto 96px auto;
     display: flex;
     flex-direction: row;
-    img {
+    .pro {
       width: 208px;
       height: 208px;
+      border-radius: 50%;
     }
     .cont2 {
       letter-spacing: 0.5px;
@@ -231,33 +219,14 @@ const Component = styled.div`
       align-items: flex-start;
 
       .profileTag {
-        .flexrow {
-          display: flex;
-        }
         display: flex;
         flex-direction: row;
         height: 48px;
-
-        & .flw {
-          width: 108px;
-          height: 32px;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          padding: 8px 16px;
-          background: #fafafa;
-          margin-left: 56px;
-          margin-top: 8px;
-          border: 0.4px solid #8e8e8e;
-          box-sizing: border-box;
-          border-radius: 4px;
-        }
       }
       .profileTag > div:nth-child(2) > img {
-        width: 36px;
+        width: 76px;
         height: 32px;
-        margin: 8px 8px 8px 16px;
+        margin: 8px 8px 8px 56px;
       }
       .profileTag > div:nth-child(3) > img {
         width: 32px;
@@ -320,7 +289,12 @@ const Component = styled.div`
     width: 768px;
     height: 80px;
     margin: auto;
-    & div {
+    & h6 {
+      margin: 5px 15px;
+      line-height: 16px;
+    }
+    & .flexx {
+      display: flex;
       width: 83px;
       height: 80px;
       margin: 0px;
@@ -380,58 +354,18 @@ margin-bottom: 28px;
    font-weight: 500;
 }
 `;
-
-const Info = styled.div`
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
   width: 928px;
-  height: 232px;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-
-  & .div {
+  & div {
     width: 288px;
-    height: 232px;
-    border: 1px solid #8e8e8e;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    & .inner {
-      height: 181px;
-      width: 224px;
-      margin: 27px auto 24px auto;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-    }
-    & p {
-      //styleName: Body/Body 1;
-      font-family: SF Pro Display;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0.5px;
-      text-align: center;
-    }
-    & svg {
-      align-items: center;
-    }
-    & button {
-      width: 184px;
-      height: 32px;
-      background-color: #0095f6;
-      border-radius: 4px;
-      border: none;
-      color: #ffffff;
-      line-height: 16px;
-      font-size: 14px;
-      font-weight: 500;
-      text-align: center;
-      margin: auto;
-    }
-    & button:focus {
-      outline: none;
+    height: 288px;
+    .boxes {
+      width: 100%;
+      height: 288px;
     }
   }
 `;

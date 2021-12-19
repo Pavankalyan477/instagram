@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const SuggestionDiv = styled.div`
   display: flex;
@@ -11,7 +13,6 @@ const SuggestionDiv = styled.div`
   left: 1136px;
   top: 128px;
   box-sizing: border-box;
-  //   border: 0.4px solid grey;
   overflow: hidden;
 `;
 
@@ -34,20 +35,25 @@ const FooterBox = styled.div`
   height: 60px;
   border: 1px solid black;
 `;
-// const SuggestFooter = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   padding: 0px;
-//   box-sizing: border-box;
-//   border: 1px solid blue;
-//   position: absolute;
-//   width: 288px;
-//   height: 60px;
-//   left: 896px;
-//   top: 480px;
-// `;
+
 const SuggestionBox = () => {
+  const [suggest, setSuggest] = useState([]);
+  console.log("suggest:", suggest);
+  const [follow, setFollow] = useState(true);
+
+  const fetchdata = async () => {
+    // const data = await axios.get("http://localhost:3005/suggest/all");
+
+    // setSuggest(data.data.item);
+    const data = await axios.get("http://localhost:3005/suggest/all");
+
+    setSuggest(data.data.item);
+  };
+
+  useEffect(() => {
+    fetchdata();
+  }, []);
+
   return (
     <SuggestionDiv>
       <div
@@ -61,7 +67,7 @@ const SuggestionBox = () => {
         <div style={{ display: "flex", alignItems: "center" }}>
           <div>
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"
+              src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202103/photo-1511367461989-f85a21fda1_0_1200x768.jpeg?YVCV8xj2CmtZldc_tJAkykymqxE3fxNf&size=770:433"
               width="48px"
               height="48px"
               alt="img"
@@ -75,8 +81,8 @@ const SuggestionBox = () => {
               margin: "auto auto auto 12px",
             }}
           >
-            <p style={{ margin: "0px" }}>Username</p>
-            <p style={{ margin: "0px" }}>Suggested</p>
+            <p style={{ margin: "0px" }}>Killerboy</p>
+            <p style={{ margin: "0px" }}>Online</p>
           </div>
         </div>
         <div>
@@ -93,7 +99,44 @@ const SuggestionBox = () => {
         <p>Suggestions for you</p>
         <button style={{ background: "none", border: "0" }}>See all</button>
       </div>
-      <div
+      {suggest.map((data) => (
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+            margin: "5px auto",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div>
+              <img
+                src={data.profile_pic}
+                width="32px"
+                height="32px"
+                alt="img"
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-evenly",
+                margin: "auto auto auto 12px",
+              }}
+            >
+              <p style={{ margin: "0px" }}>{data.user_name}</p>
+              <p style={{ margin: "0px" }}>{data.status}</p>
+            </div>
+          </div>
+          <div>
+            <Button>Follow</Button>
+          </div>
+        </div>
+      ))}
+
+      {/* <div
         style={{
           display: "flex",
           width: "100%",
@@ -262,41 +305,7 @@ const SuggestionBox = () => {
         <div>
           <Button>Follow</Button>
         </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "space-between",
-          alignItems: "center",
-          margin: "5px auto",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"
-              width="32px"
-              height="32px"
-              alt="img"
-            />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-evenly",
-              margin: "auto auto auto 12px",
-            }}
-          >
-            <p style={{ margin: "0px" }}>Username</p>
-            <p style={{ margin: "0px" }}>Suggested</p>
-          </div>
-        </div>
-        <div>
-          <Button>Follow</Button>
-        </div>
-      </div>
+      </div> */}
       <FooterBox>
         <h1>heading</h1>
       </FooterBox>

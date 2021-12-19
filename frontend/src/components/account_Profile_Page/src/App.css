@@ -1,7 +1,0 @@
-*::after,
-*,
-*::before {
-  background-color: rgb(250, 250, 250);
-  box-sizing: border-box;
-  font-family: SF Pro Display;
-}

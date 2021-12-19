@@ -99,7 +99,9 @@ export const Signupmain = () => {
         </Box>
         <div className="log_btn">
           <div className="log_title1" type="submit" onClick={handleSignup}>
-            <Link  to={user ? "/Birthday" : "/signup"}>Sign up</Link>
+            <Link className="link" to={!user ? "/Birthday" : "/Signup_page"}>
+              Sign up
+            </Link>
           </div>
         </div>
 

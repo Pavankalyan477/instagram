@@ -1,6 +1,6 @@
 import "./navbar.css";
 // import { debounce } from "lodash";
- import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // import axios from "axios";
 
@@ -24,17 +24,15 @@ const Navbar = () => {
       return false;
     }
     // console.log("len",search.length)
-    if(search.length!==1){
+    if (search.length !== 1) {
       let show = document.querySelector(".hate_you");
-      show.style.display="none";
-
-    }else{
+      show.style.display = "none";
+    } else {
       let show = document.querySelector(".hate_you");
-      show.style.display="block";
+      show.style.display = "block";
       //  console.log("seaarch:",search)
       setDisplay(search);
     }
-   
   }
   console.log(display);
   // function appendsearch(m) {
@@ -261,7 +259,10 @@ const Navbar = () => {
         }}
       >
         {display.map((el) => (
-          <Link style={{ display: "flex", flexDirection: "row" }} to={`/Postpage/${el.user_name}`} >
+          <Link
+            style={{ display: "flex", flexDirection: "row" }}
+            to={`/Postpage/${el._id}`}
+          >
             <div>
               <img src={el.profile_pic} alt="dp" width="30px" height="30px" />
             </div>

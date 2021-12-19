@@ -30,4 +30,10 @@ router.get("/one/:name", async (req, res) => {
   return res.status(200).send({ item });
 });
 
+router.get("/id/:id", async (req, res) => {
+  let item = await Suggest.find({ _id: req.params.id }).lean().exec();
+
+  return res.status(200).send({ item });
+});
+
 module.exports = router;

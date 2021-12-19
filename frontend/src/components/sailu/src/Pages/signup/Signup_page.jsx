@@ -4,14 +4,12 @@ import { Getapp } from "../Getapp";
 import { Signupmain } from "./Signupmain";
 import "./sign_style.css";
 
-
-export const Signup_page=()=>{
-    return(
-        <div>
-           <Signupmain></Signupmain>
-           <Getapp></Getapp>
-           <Footer></Footer>
-        </div>
-    );
-}
-
+export const Signup_page = () => {
+  return (
+    <div>
+      <Signupmain></Signupmain>
+      <Getapp></Getapp>
+      <Footer></Footer>
+    </div>
+  );
+};
