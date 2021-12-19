@@ -115,16 +115,7 @@ export const ProfilePage = () => {
           <p>TAGGED</p>
         </div>
       </Tags>
-      {/* <Grid>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-            <div></div></Grid> */}
+
       <Info>
         <div className="div">
           <div className="inner">
@@ -386,18 +377,7 @@ margin-bottom: 28px;
    font-weight: 500;
 }
 `;
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
-  width: 928px;
-  margin: auto;
-  & div {
-    background: #231e1f;
-    width: 288px;
-    height: 288px;
-  }
-`;
+
 const Info = styled.div`
   width: 928px;
   height: 232px;

@@ -1,0 +1,55 @@
+.login {
+  width: 100wh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.loginwraper {
+  width: 70%;
+  height: 70%;
+  display: flex;
+}
+
+.loginleft,
+.loginright {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginlogo {
+  font-size: 50px;
+  font-weight: 800;
+  color: rebeccapurple;
+  margin-bottom: 10px;
+}
+.loginDesc {
+  font-size: 24px;
+}
+.loginBox {
+  height: 300px;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.loginIp {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+}
+.lognBtn,
+.loginRegisterBtn {
+  cursor: pointer;
+}
+.loginForget {
+  text-align: center;
+  color: black;
+}

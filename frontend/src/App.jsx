@@ -2,64 +2,53 @@ import "./App.css";
 import DM from "./components/DM/DM";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Suggest } from "./components/suggestions/Suggest";
-import {Home} from "./components/sailu/src/Pages/Home"
-import {Switch,Route} from "react-router-dom"
-import {Signup_page} from "./components/sailu/src/Pages/signup/Signup_page"
-
-import {Birthmain} from "./components/sailu/src/Pages/birthday/Birthmain"
-import {Emailmain} from "./components/sailu/src/Pages/email/Emailmain"
-
-import {ProfilePage} from "./account/ProfilePage"
-
+import { Home } from "./components/sailu/src/Pages/Home";
+import { Switch, Route } from "react-router-dom";
+import { Signup_page } from "./components/sailu/src/Pages/signup/Signup_page";
+import { Birthmain } from "./components/sailu/src/Pages/birthday/Birthmain";
+import { Emailmain } from "./components/sailu/src/Pages/email/Emailmain";
+import { ProfilePage } from "./account/ProfilePage";
 
 function App() {
   return (
-    <div className="App" >
-        {/* <Signup_page/> */}
-       
+    <div className="App">
       <Switch>
-        
         <Route exact path="/">
-          <Home/>
+          <Home />
         </Route>
-     
-        <Route exact path="/Suggest">
-          <Navbar/>
-        <Suggest />
 
+        <Route exact path="/Suggest">
+          <Navbar />
+          <Suggest />
         </Route>
-        <Route exact  path="/Signup_page">
-        <Signup_page/>
+        <Route exact path="/signup">
+          <Signup_page />
         </Route>
 
         <Route exact path="/Birthday">
-          <Birthmain/>
+          <Birthmain />
         </Route>
         <Route exact path="/Email">
-          <Emailmain/>
+          <Emailmain />
         </Route>
         <Route exact path="/Suggest">
-          <Suggest/>
+          <Suggest />
         </Route>
         <Route exact path="/Suggest">
-          <Navbar/>
-          <Suggest/>
+          <Navbar />
+          <Suggest />
         </Route>
 
         <Route exact path="/chat">
-          <Navbar/>
-          <DM/>
+          <Navbar />
+          <DM />
         </Route>
 
         <Route exact path="/account">
-          <Navbar/>
-          <ProfilePage/>
+          <Navbar />
+          <ProfilePage />
         </Route>
-
       </Switch>
-      {/* <Navbar /> */}
-      {/*  */}
-      {/* <DM /> */}
     </div>
   );
 }
