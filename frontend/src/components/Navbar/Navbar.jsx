@@ -57,7 +57,7 @@ const Navbar = () => {
   //     val.style.display = "block";
   //   }
   // };
-
+  const [display, setDisplay] = useState({ name: " ", desc1: " ", img1: " " });
   var timerId;
 
   async function get(name) {
@@ -65,7 +65,7 @@ const Navbar = () => {
     var data = await res.json();
     return data;
   }
-
+  console.log("disp:", display);
   async function main() {
     let name = document.querySelector(".inp").value;
     let search = await get(name);
@@ -81,9 +81,9 @@ const Navbar = () => {
     m.forEach(({ name, profile_pic, description }) => {
       let out = document.querySelector(".div22");
       let show = document.querySelector(".hate_you");
-      let come = document.querySelector(".cls1");
-      let come2 = document.querySelector(".cls2");
-      let img = document.querySelector(".pic");
+      var come = document.querySelector(".cls1");
+      var come2 = document.querySelector(".cls2");
+      var img = document.querySelector(".pic");
 
       // let img=document.createElement("img")
 
@@ -96,8 +96,16 @@ const Navbar = () => {
       } else {
         show.style.display = "none";
       }
-      out.append(come, come2);
-      show.append(img, out);
+
+      name = come;
+
+      let data = {
+        ...display,
+      };
+      setDisplay(data);
+
+      // out.append(come,come2);
+      // show.append(img,out);
     });
   }
   function debounce(func, delay) {
@@ -292,8 +300,8 @@ const Navbar = () => {
             <img className="pic" />
           </div>
           <div className="div22">
-            <div className="cls1"></div> <br />
-            <div className="cls2"></div>
+            <div className="cls1">{}</div> <br />
+            <div className="cls2">{}</div>
           </div>
         </div>
       </div>

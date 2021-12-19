@@ -38,7 +38,7 @@
 }
 
 
-.post_down{
+.post_down_comt{
     height: 56px;
     width: 100%;
 }
@@ -74,13 +74,12 @@
     margin-top: 2px;
 }
 
-.post_down{
+.post_down_comment{
     display: flex;
-    height: 57px;
+    height: 54px;
     width: 100%;
-    border: 0.4px solid #8E8E8E;
     border-radius: 4px;
-    margin-top: 6px;
+    margin-top: 8px;
 
 }
 

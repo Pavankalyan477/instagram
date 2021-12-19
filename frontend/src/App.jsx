@@ -5,13 +5,17 @@ import { Suggest } from "./components/suggestions/Suggest";
 import { Home } from "./components/sailu/src/Pages/Home";
 import { Switch, Route } from "react-router-dom";
 import { Signup_page } from "./components/sailu/src/Pages/signup/Signup_page";
+import Homepage from "./components/Homepage/Homepage";
 import { Birthmain } from "./components/sailu/src/Pages/birthday/Birthmain";
 import { Emailmain } from "./components/sailu/src/Pages/email/Emailmain";
+
 import { ProfilePage } from "./account/ProfilePage";
 
 function App() {
   return (
     <div className="App">
+      {/* <Signup_page/> */}
+
       <Switch>
         <Route exact path="/">
           <Home />
@@ -21,7 +25,7 @@ function App() {
           <Navbar />
           <Suggest />
         </Route>
-        <Route exact path="/signup">
+        <Route exact path="/Signup_page">
           <Signup_page />
         </Route>
 
@@ -30,6 +34,10 @@ function App() {
         </Route>
         <Route exact path="/Email">
           <Emailmain />
+        </Route>
+        <Route exact path="/Homepage">
+          <Navbar />
+          <Homepage />
         </Route>
         <Route exact path="/Suggest">
           <Suggest />
