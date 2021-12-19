@@ -1,8 +1,8 @@
 import "./navbar.css";
-import { debounce } from "lodash";
-import { useEffect, useState } from "react";
+// import { debounce } from "lodash";
+ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 const Navbar = () => {
   const [display, setDisplay] = useState([]);
@@ -15,7 +15,6 @@ const Navbar = () => {
     // console.log("disp:", data);
     return data.item;
   }
-
   async function main() {
     let name = document.querySelector(".inp").value;
     let search = await get(name);

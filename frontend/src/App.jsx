@@ -63,9 +63,6 @@ function App() {
           <AboutPage/>
         </Route>
       </Switch>
-      {/* <Navbar /> */}
-      {/*  */}
-      {/* <DM /> */}
     </div>
   );
 }

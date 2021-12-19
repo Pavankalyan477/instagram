@@ -1,52 +1,19 @@
-import React, { useState } from "react";
-import { Box, TextField, Button } from "@material-ui/core";
+import React, { useState, useContext } from "react";
+import { Box, TextField } from "@material-ui/core";
 import "./sign_style.css";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
-import { useHistory } from "react-router";
-import { axios } from "axios";
-import { Redirect } from "react-router-dom";
+import { loginCall } from "../../../../../apicalls";
+import { AuthContext } from "../../../../../Context/AuthContext";
 
 export const Signupmain = () => {
+  const { user, err, dispatch } = useContext(AuthContext);
+
   const [state, setState] = useState({
     username: " ",
-    email: " ",
+    email: "",
     password: " ",
   });
-  const [isAuth, setIsAuth] = useState(false);
 
-  const postData = async () => {
-    if (
-      state.username === " " ||
-      state.email === " " ||
-      state.password === " "
-    ) {
-      setIsAuth(isAuth)
-      // Redirect('/Signup_page')
-      return (
-        alert("Invalid credentials, please try agai")
-      );
-    } else {
-      setIsAuth(!isAuth);
-      try {
-        let res = await axios.post(
-          "http://localhost:3005/api/auth/login",
-          state
-        );
-       
-        console.log("res:", res);
-        // history.push("/Birthday");
-      } catch (err) {
-        console.log("err:", err);
-      }
-    }
-  };
-
-  const handleSignup = async (e) => {
-    e.preventDefault();
-    postData();
-  };
-  console.log("form", state);
   const handlechange = (e) => {
     const { name, value } = e.target;
 
@@ -55,6 +22,15 @@ export const Signupmain = () => {
       [name]: value,
     };
     setState(data);
+  };
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+
+    if (state.username === "" || state.email === "" || state.password === "")
+      return;
+
+    loginCall({ state }, dispatch);
   };
 
   return (
@@ -123,7 +99,7 @@ export const Signupmain = () => {
         </Box>
         <div className="log_btn">
           <div className="log_title1" type="submit" onClick={handleSignup}>
-            <Link className="link" to={!isAuth?"/Signup_page": "/Birthday"}>Sign up</Link>
+            <Link  to={user ? "/Birthday" : "/signup"}>Sign up</Link>
           </div>
         </div>
 
