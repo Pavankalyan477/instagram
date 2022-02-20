@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import "../App.css";
-import { useState, useContext, useEffect } from "react";
-import { AuthContext } from "../Context/AuthContext";
+import { useState, useEffect } from "react";
+
 import { useParams } from "react-router-dom";
-import axios from "axios";
+
 
 export const AboutPage = () => {
   const { na } = useParams();
@@ -22,7 +22,7 @@ export const AboutPage = () => {
   }
   useEffect(() => {
     get(na);
-  }, []);
+  }, );
 
   // const Images = itm.images;
 

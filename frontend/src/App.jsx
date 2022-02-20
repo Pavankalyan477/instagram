@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Suggest } from "./components/suggestions/Suggest";
 import { Home } from "./components/sailu/src/Pages/Home";
 import { Switch, Route } from "react-router-dom";
-import { Signup_page } from "./components/sailu/src/Pages/signup/Signup_page";
+import { Signuppage } from "./components/sailu/src/Pages/signup/Signuppage";
 import Homepage from "./components/Homepage/Homepage";
 import { Birthmain } from "./components/sailu/src/Pages/birthday/Birthmain";
 import { Emailmain } from "./components/sailu/src/Pages/email/Emailmain";
@@ -27,7 +27,7 @@ function App() {
           <Homepage />
         </Route>
         <Route exact path="/Signup_page">
-          <Signup_page />
+          <Signuppage />
         </Route>
 
         <Route exact path="/Birthday">

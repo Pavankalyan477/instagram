@@ -395,18 +395,7 @@ margin-bottom: 28px;
    font-weight: 500;
 }
 `;
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
-  width: 928px;
-  margin: auto;
-  & div {
-    background: #231e1f;
-    width: 288px;
-    height: 288px;
-  }
-`;
+
 const Info = styled.div`
   width: 928px;
   height: 232px;

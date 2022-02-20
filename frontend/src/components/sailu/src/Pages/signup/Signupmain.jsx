@@ -6,7 +6,7 @@ import { loginCall } from "../../../../../apicalls";
 import { AuthContext } from "../../../../../Context/AuthContext";
 
 export const Signupmain = () => {
-  const { user, err, dispatch } = useContext(AuthContext);
+  const { user, dispatch } = useContext(AuthContext);
 
   const [state, setState] = useState({
     username: " ",
@@ -51,11 +51,11 @@ export const Signupmain = () => {
         </div>
         <div className="below">
           <div className="line1">
-            <img src="https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/line.png?raw=true"></img>
+            <img src="https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/line.png?raw=true" alt="imag"></img>
           </div>
           <div className="or">OR</div>
           <div className="line2">
-            <img src="https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/line.png?raw=true"></img>
+            <img src="https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/line.png?raw=true" alt="imag"></img>
           </div>
         </div>
 

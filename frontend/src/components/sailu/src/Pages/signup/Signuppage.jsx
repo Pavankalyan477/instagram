@@ -4,7 +4,7 @@ import { Getapp } from "../Getapp";
 import { Signupmain } from "./Signupmain";
 import "./sign_style.css";
 
-export const Signup_page = () => {
+export const Signuppage = () => {
   return (
     <div>
       <Signupmain></Signupmain>

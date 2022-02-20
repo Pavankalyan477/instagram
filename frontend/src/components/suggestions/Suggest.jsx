@@ -4,7 +4,7 @@ import Suggestion from "./Suggestion";
 
 export const Suggest = () => {
 
-  const hate=document.querySelector(".hate_you")
+  
   const Container = styled.div`
     // margin: 96px auto 80px;
     // background: blueviolet;

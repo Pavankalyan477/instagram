@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer } from "../Footer";
 import { Getapp } from "../Getapp";
-import {Box, TextField, Button} from "@material-ui/core";
+import {Box, TextField} from "@material-ui/core";
 import "./em_style.css";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ export const Emailmain=()=>{
     return(
         <div>
             <div className="emdiv">
-                <div className="emailimg"><img src="https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/mail.png?raw=true"></img></div>
+                <div className="emailimg"><img src="https://github.com/sailuchandragiri/sailuchandragiri/blob/main/Project/mail.png?raw=true" alt="imag"></img></div>
                 <div className="code">Enter Confirmation Code</div>
                 <div className="conform">
                     <div className="conf">Enter the confirmation code we sent to</div>

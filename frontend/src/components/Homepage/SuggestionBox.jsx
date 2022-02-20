@@ -39,7 +39,7 @@ const FooterBox = styled.div`
 const SuggestionBox = () => {
   const [suggest, setSuggest] = useState([]);
   console.log("suggest:", suggest);
-  const [follow, setFollow] = useState(true);
+
 
   const fetchdata = async () => {
     // const data = await axios.get("http://localhost:3005/suggest/all");

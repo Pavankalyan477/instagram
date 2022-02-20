@@ -19,20 +19,7 @@ const HomepageDiv = styled.div`
   padding: 0 12px;
 `;
 
-const GettingStartedHeading = styled.p`
-  position: absolute;
-  //   width: 100px;
-  height: 16px;
-  left: 496px;
-  top: 288px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
 
-  color: #000000;
-`;
 const GettingStartedBanner = styled.div`
   display: flex;
   flex-direction: column;
@@ -189,7 +176,7 @@ const LearnMore = styled.p`
 const Homepage = () => {
   const [suggest, setSuggest] = useState([]);
   console.log("suggest:", suggest);
-  const [follow, setFollow] = useState(true);
+ 
 
   const fetchdata = async () => {
     // const data = await axios.get("http://localhost:3005/suggest/all");
